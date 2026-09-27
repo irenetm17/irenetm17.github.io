@@ -1,0 +1,100 @@
+/* --- ESTILOS GENERALES --- */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Color pared clara de museo */
+    color: #333;
+    scroll-behavior: smooth; /* Hace que el menú baje con suavidad */
+}
+
+/* --- EL HEADER FIJO (STICKY) --- */
+header {
+    background-color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    
+    /* ¡LA MAGIA DEL STICKY! */
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; /* Asegura que el menú siempre esté por encima del resto */
+}
+
+header nav a {
+    text-decoration: none;
+    color: #555;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #000;
+}
+
+.btn-cv {
+    background-color: #333;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* --- SECCIONES (LAS SALAS) --- */
+section {
+    padding: 80px 40px;
+    min-height: 50vh; /* Para que haya espacio para hacer scroll */
+}
+
+#banner {
+    text-align: center;
+    background-color: #e0e0e0;
+    padding: 100px 20px;
+}
+
+/* --- LA PARED DE CUADROS ASIMÉTRICOS --- */
+.pared-cuadros {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espacio entre cuadros */
+    flex-wrap: wrap; /* Si no caben, bajan a la siguiente línea */
+    margin-top: 50px;
+}
+
+.cuadro {
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Para la animación del JS más adelante */
+}
+
+/* El truco de la asimetría */
+.asimetrico-alto {
+    margin-top: 0px;
+}
+
+.asimetrico-bajo {
+    margin-top: 80px; /* Empuja el cuadro hacia abajo */
+}
+
+.marco {
+    background-color: #fff;
+    padding: 10px;
+    height: 350px;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.2); /* Sombra tipo cuadro colgado */
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+}
+
+.cartela {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
