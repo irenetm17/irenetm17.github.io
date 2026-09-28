@@ -3,8 +3,9 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Color pared clara de museo */
-    color: #333;
+    /*background-color: #f5d6ef;  Color pared clara de museo */
+    background-image: url( "fondo2.jpg");
+    color: #f3eef7;
     scroll-behavior: smooth; /* Hace que el menú baje con suavidad */
 }
 
@@ -54,13 +55,14 @@ section {
     text-align: left;
     background-color: #e0e0e0;
     padding: 50px 20px;
+    color: #0f1c59;
 }
 
 /* --- LA PARED DE CUADROS ASIMÉTRICOS --- */
 .pared-cuadros {
     display: flex; /*para ordenar en filas o columnas*/
     justify-content: center; /*lo pone en el centro*/
-    gap: 40px; /*espacio entre cuadros*/
+    gap: 100px; /*espacio entre cuadros*/
     flex-wrap: wrap; /*si no caben los baja de fila*/
     margin-top: 50px; /*separación con el título*/
 }
@@ -82,7 +84,7 @@ section {
 
 .marco {
     /* Insertamos dibujo como fondo del contenedor */
-    background-image: url('marco-dibujo.png');
+    background-image: url('unnamed.png');
     background-size: 100% 100%; /* Ajusta el trazo al tamaño exacto de la caja */
     background-repeat: no-repeat;
     background-position: center;
@@ -114,6 +116,8 @@ section {
     background-color: #b097c6; 
     text-align: left;
     padding: 50px 20px;
+    
+    color: #110f2c;
 }
 .contenedor-sobremi {
     display: flex; /*para ordenar en filas o columnas*/
