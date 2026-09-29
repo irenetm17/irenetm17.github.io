@@ -82,27 +82,31 @@ section {
     margin-top: 80px; /* Empuja el cuadro hacia abajo */
 }
 
-.marco {
-    /* Insertamos dibujo como fondo del contenedor */
-    background-image: url('unnamed.png');
-    background-size: 100% 100%; /* Ajusta el trazo al tamaño exacto de la caja */
-    background-repeat: no-repeat;
-    background-position: center;
-    
-    /* Dimensiones generales */
-    width: 100%;
+
+.contenedor-lienzo {
+    display: grid; /* Creamos una cuadrícula de 1 sola celda */
+    width: 250px;
     height: 350px;
-    
-    /* Centramos el contenido interno */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    /* Eliminamos los bordes y fondos del diseño anterior */
-    background-color: transparent; 
-    border: none;
-    box-shadow: none;
+    margin: 0 auto;
 }
+
+.imagen-juego, .imagen-marco {
+    grid-area: 1 / 1; /* ¡La magia! Obliga a ambas a ocupar exactamente la misma celda */
+    width: 100%;
+    height: 100%;
+}
+
+.imagen-juego {
+    object-fit: cover; /* Recorta la foto del juego si es necesario para llenar el hueco sin achatarse */
+    z-index: 1; /* Se queda atrás */
+    padding: 50px; box-sizing: border-box; */
+}
+
+.imagen-marco {
+    z-index: 2; /* Se pone por delante */
+    pointer-events: none; /* Deja que el clic lo atraviese para que el enlace funcione */
+}
+
 
 .cartela {
     margin-top: 20px;
