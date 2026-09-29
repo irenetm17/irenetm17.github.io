@@ -88,22 +88,48 @@
                 <p class="cartela">Descripción de tu rol en el juego</p>
             </div>
 
-            <!-- Cuadro 2 -->
+            <!-- Cuadro 2 (Será una foto en popup) -->
             <div class="cuadro asimetrico-bajo">
+                <div class="contenedor-lienzo abrir-popup" data-foto="mi-dibujo1.jpg" data-texto="Boceto de personajes">
+                    <img src="mi-dibujo1.jpg" alt="Dibujo 1" class="imagen-juego">
+                    <img src="unnamed.png" alt="Marco" class="imagen-marco">
+                </div>
+                <p class="cartela">Boceto de personajes</p>
+            </div> 
+
+            <!-- Cuadro 3 (Será otra foto en popup) -->
+            <div class="cuadro asimetrico-alto">
+                <div class="contenedor-lienzo abrir-popup" data-foto="mi-dibujo2.jpg" data-texto="Diagrama de mecánicas">
+                    <img src="mi-dibujo2.jpg" alt="Dibujo 2" class="imagen-juego">
+                    <img src="unnamed.png" alt="Marco" class="imagen-marco">
+                </div>
+                <p class="cartela">Diagrama de mecánicas</p>
+            </div>
+
+            <!-- Cuadro 2 -->
+            <!-- <div class="cuadro asimetrico-bajo">
                 <a href="proyecto-grupal-2.html">
                     <div class="marco">Imagen del juego</div>
                 </a>
                 <p class="cartela">Descripción de tu rol en el juego</p>
             </div>
 
-            <!-- Cuadro 3 -->
+            <!-- Cuadro 3 
             <div class="cuadro asimetrico-alto">
                 <a href="proyecto-grupal-1.html">
                     <div class="marco">Imagen del juego</div>
                 </a>
                 <p class="cartela">Descripción de tu rol en el juego</p>
-            </div>  
+            </div>   -->
         </div>
+        
+            <!-- EL POPUP (MODAL) PARA LAS FOTOS -->
+            <div id="fondo-popup" class="oculto">
+                <span id="cerrar-popup">&times;</span> <!-- La X para cerrar -->
+                <img id="imagen-popup" src="" alt="Popup">
+                <p id="texto-popup"></p>
+            </div>
+
     </section>
 
     <!-- SECCIÓN SOBRE MÍ -->

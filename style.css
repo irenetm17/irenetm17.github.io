@@ -172,7 +172,61 @@ footer a {
     margin: 0 15px;
     font-weight: bold;
 }
+/* --- POPUP (MODAL) PARA FOTOS --- */
+#fondo-popup {
+    position: fixed; /* Fijo en la pantalla aunque hagas scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(17, 15, 44, 0.9); /* Fondo oscuro semi-transparente */
+    z-index: 2000; /* Por encima de TODO, incluyendo el header */
+    
+    /* Centramos el contenido con Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
+/* Clase maestra para ocultar el popup con JavaScript */
+.oculto {
+    display: none !important;
+}
+
+#imagen-popup {
+    max-width: 80%; /* Para que no se salga de la pantalla en ordenadores */
+    max-height: 80vh; /* Máximo 80% de la altura de la ventana */
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+}
+
+#texto-popup {
+    color: #f3eef7;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#cerrar-popup {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+#cerrar-popup:hover {
+    color: #f1c2fe;
+}
+
+/* Para que el ratón parezca que puede hacer clic en los cuadros de foto */
+.abrir-popup {
+    cursor: pointer;
+}
 /* =========================================
    MEDIA QUERIES PARA PANTALLAS MEDIANAS (Tablets o pantallas 3/4)
    ========================================= */
