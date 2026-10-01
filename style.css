@@ -1,6 +1,6 @@
 /* --- ESTILOS GENERALES --- */
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Forum', serif;
     margin: 0;
     padding: 0;
     /*background-color: #f5d6ef;  Color pared clara de museo */
@@ -52,10 +52,31 @@ section {
 }
 
 #banner {
-    text-align: left;
-    background-color: #e0e0e0;
-    padding: 50px 20px;
-    color: #0f1c59;
+    padding: 0; 
+    margin: 0;
+    width: 100%;
+    height: 80vh; 
+    overflow: hidden; /* Esto es vital: corta cualquier parte del vídeo que sobresalga de esta altura */
+    background-color: #000; /* Fondo negro por si el vídeo tarda un segundo en cargar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 2. El contenedor del vídeo */
+.contenedor-video {
+    width: 100%;
+    height: 100%; /* Ocupa el 100% de la sección (esos 80vh) */
+    position: relative;
+}
+
+/* 3. El vídeo en sí */
+.video-fondo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* MAGIA: Esto hace que el vídeo actúe como una foto de fondo. 
+                          Se recortará por los bordes para llenar todo el espacio sin achatarse ni deformarse. */
+    object-position: center; /* Asegura que el centro del vídeo siempre esté visible */
 }
 
 /* --- LA PARED DE CUADROS ASIMÉTRICOS --- */
@@ -111,7 +132,7 @@ section {
 .cartela {
     margin-top: 20px;
     font-size: 14px;
-    color: #666;
+    color: #b8b8b8;
     border-top: 1px solid #ccc;
     padding-top: 20px;
 }
@@ -172,7 +193,7 @@ footer a {
     margin: 0 15px;
     font-weight: bold;
 }
-/* --- POPUP (MODAL) PARA FOTOS --- */
+/* --- POPUP PARA FOTOS --- */
 #fondo-popup {
     position: fixed; /* Fijo en la pantalla aunque hagas scroll */
     top: 0;
@@ -181,8 +202,6 @@ footer a {
     height: 100%;
     background-color: rgba(17, 15, 44, 0.9); /* Fondo oscuro semi-transparente */
     z-index: 2000; /* Por encima de TODO, incluyendo el header */
-    
-    /* Centramos el contenido con Flexbox */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -227,6 +246,8 @@ footer a {
 .abrir-popup {
     cursor: pointer;
 }
+
+
 /* =========================================
    MEDIA QUERIES PARA PANTALLAS MEDIANAS (Tablets o pantallas 3/4)
    ========================================= */

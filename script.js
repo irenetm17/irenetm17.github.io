@@ -12,7 +12,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// === POPUP (MODAL) PARA FOTOS ===
+// === POPUP PARA FOTOS ===
 
 // Seleccionamos los elementos del HTML
 const popup = document.getElementById('fondo-popup');
